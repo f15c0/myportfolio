@@ -126,7 +126,7 @@ export function HeaderMiddle() {
   ));
 
   return (
-    <Header height={56} mb={120}>
+    <Header height={56} mb={0}>
       <Container className={classes.inner}>
         <Burger
           opened={opened}
