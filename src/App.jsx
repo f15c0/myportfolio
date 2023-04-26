@@ -7,9 +7,9 @@ import ParticlesBg from "./components/ParticlesBg";
 function App() {
   return (
     <MantineProvider withGlobalStyles withNormalizeCSS>
-      <ParticlesBg />
+      {/* <ParticlesBg /> */}
       <HeaderMiddle />
-      {/* <Jumbo /> */}
+      <Jumbo />
     </MantineProvider>
   );
 }

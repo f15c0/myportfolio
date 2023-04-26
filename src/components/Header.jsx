@@ -28,8 +28,6 @@ const useStyles = createStyles((theme) => ({
   },
 
   links: {
-    width: rem(260),
-
     [theme.fn.smallerThan("sm")]: {
       display: "none",
     },
@@ -92,15 +90,19 @@ const useStyles = createStyles((theme) => ({
 const links = [
   {
     link: "/about",
-    label: "Home",
-  },
-  {
-    link: "/learn",
     label: "About",
   },
   {
-    link: "/pricing",
+    link: "/works",
+    label: "Experience",
+  },
+  {
+    link: "/projects",
     label: "Projects",
+  },
+  {
+    link: "/contact",
+    label: "Contact",
   },
 ];
 
@@ -133,15 +135,16 @@ export function HeaderMiddle() {
           onClick={toggle}
           size="sm"
           className={classes.burger}
-        />
-        <Group className={classes.links} spacing={5}>
+        ></Burger>
+
+        <Group className={classes.links} spacing={10}>
           {items}
         </Group>
-
-        <div>
-          <h2>Dennis Fisco</h2>
+        <div className="">
+          <h2 className="cursor-pointer hover:text-gray-400">
+            Dennis <span className="font-bold">Fisco</span>
+          </h2>
         </div>
-
         <Group spacing={0} className={classes.social} position="right" noWrap>
           <ActionIcon size="lg">
             <IconBrandTwitter size="1.1rem" stroke={1.5} />

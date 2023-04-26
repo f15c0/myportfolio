@@ -23,6 +23,7 @@
     "@tabler/icons-react": "^2.10.0",
     "dayjs": "^1.11.7",
     "embla-carousel-react": "^7.1.0",
+    "gsap": "^3.11.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-particles": "^2.9.3",
@@ -32,6 +33,9 @@
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
     "@vitejs/plugin-react": "^3.1.0",
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.23",
+    "tailwindcss": "^3.3.2",
     "vite": "^4.1.0"
   }
 }
