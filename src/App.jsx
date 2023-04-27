@@ -6,7 +6,27 @@ import ParticlesBg from "./components/ParticlesBg";
 
 function App() {
   return (
-    <MantineProvider withGlobalStyles withNormalizeCSS>
+    <MantineProvider
+      theme={{
+        colors: {
+          primary: [
+            "#e0fbf4",
+            "#c2ebe1",
+            "#a0dccf",
+            "#7dcebf",
+            "#5bc0b0",
+            "#42a79a",
+            "#31827a",
+            "#205d53",
+            "#0d392e",
+            "#00150d",
+          ],
+        },
+        primaryColor: "primary",
+      }}
+      withGlobalStyles
+      withNormalizeCSS
+    >
       {/* <ParticlesBg /> */}
       <HeaderMiddle />
       <Jumbo />
