@@ -5,15 +5,17 @@ import {
   Text,
   useMantineTheme,
 } from "@mantine/core";
-import { gsap } from "gsap";
+
 import Linkedin from "../assets/linkedin.svg";
 import { BsLinkedin, BsCloudDownload } from "react-icons/bs";
 import { useLayoutEffect, useRef } from "react";
 import TypingText from "./TypingText";
 import { useDisclosure } from "@mantine/hooks";
 import HireMe from "./HireModal";
+import CV from "../assets/Dennis_Agbokpe_CV.pdf";
 
 const Jumbo = () => {
+  ///Texts
   const staticText = "Hello there, I'm  ";
   const texts = [
     "a Software Engineer.",
@@ -21,9 +23,16 @@ const Jumbo = () => {
     "a Freelancer.",
   ];
 
+  ///Profile LInks
+  const linkedIn = "https://www.linkedin.com/in/dennis-agbokpe-b1b4241aa/";
+
+  ///Theme
   const theme = useMantineTheme();
+
+  ///Refs
   const whoamiRef = useRef(null);
 
+  ///Effects & Hooks
   const [opened, { open, close }] = useDisclosure(false);
 
   return (
@@ -55,30 +64,17 @@ const Jumbo = () => {
               </Text>
             </div>
           </div>
-
-          {/* <div className="text-center py-3 col-span-2">
-            <div>
-              <Text
-                className=" text-5xl font-extrabold text-center"
-                ref={whoamiRef}
-              >
-                <Text
-                  color={theme.primaryColor}
-                  className=" text-center flex justify-center"
-                >
-                  <TypingText staticText="I'm" texts={texts} />
-                </Text>
-              </Text>
-            </div>
-          </div> */}
+          {/* Something here */}
         </div>
         <div className="py-3  space-x-10 flex items-center justify-center">
-          <Button
-            leftIcon={<BsLinkedin className="text-xl rounded-sm " />}
-            className="rounded-3xl text-sm "
-          >
-            Let's Connect!
-          </Button>
+          <a href={linkedIn} target="_blank" rel="noopener noreferrer">
+            <Button
+              leftIcon={<BsLinkedin className="text-xl rounded-sm " />}
+              className="rounded-3xl text-sm "
+            >
+              Let's Connect!
+            </Button>
+          </a>
           <Button
             variant="outline"
             className="rounded-3xl hover:shadow-sm text-sm "
@@ -86,14 +82,16 @@ const Jumbo = () => {
           >
             Hire me
           </Button>
-          <Button
-            rightIcon={<BsCloudDownload className="text-xl " />}
-            color="gray"
-            variant="light"
-            className="rounded-3xl shadow-md text-sm "
-          >
-            Download Resume
-          </Button>
+          <a href={CV}>
+            <Button
+              rightIcon={<BsCloudDownload className="text-xl " />}
+              color="gray"
+              variant="light"
+              className="rounded-3xl shadow-md text-sm "
+            >
+              Download Resume
+            </Button>
+          </a>
         </div>
       </Container>
       {/* <Divider label="About Me" /> */}
