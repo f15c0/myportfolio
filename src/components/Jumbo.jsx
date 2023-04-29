@@ -69,6 +69,7 @@ const Jumbo = () => {
         <div className="py-3  space-x-10 flex items-center justify-center">
           <a href={linkedIn} target="_blank" rel="noopener noreferrer">
             <Button
+              variant="default"
               leftIcon={<BsLinkedin className="text-xl rounded-sm " />}
               className="rounded-3xl text-sm "
             >
@@ -76,7 +77,6 @@ const Jumbo = () => {
             </Button>
           </a>
           <Button
-            variant="outline"
             className="rounded-3xl hover:shadow-sm text-sm "
             onClick={open}
           >
