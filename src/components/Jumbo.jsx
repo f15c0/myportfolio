@@ -17,12 +17,7 @@ import About from "./About";
 
 const Jumbo = () => {
   ///Texts
-  const staticText = "Hello there, I'm  ";
-  const texts = [
-    "a Software Engineer.",
-    "a Full-Stack Developer.",
-    "a Freelancer.",
-  ];
+  const texts = ["Software Engineer.", "Full-Stack Developer.", "Freelancer."];
 
   ///Profile LInks
   const linkedIn = "https://www.linkedin.com/in/dennis-agbokpe-b1b4241aa/";
@@ -46,7 +41,7 @@ const Jumbo = () => {
         <div className="grid grid-cols-2">
           <div className="text-center col-span-2 justify-center items-center">
             <Text
-              className="text-xl font-light pt-3"
+              className="md:text-xl font-light pt-3"
               color={theme.primaryColor}
             >
               Hello there, I'm Dennis K.
@@ -60,7 +55,7 @@ const Jumbo = () => {
                   color={theme.primaryColor}
                   className=" text-center flex justify-center"
                 >
-                  <TypingText staticText="I'm" texts={texts} />
+                  <TypingText staticText="I'm a" texts={texts} />
                 </Text>
               </Text>
             </div>

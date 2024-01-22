@@ -35,13 +35,13 @@ const TypingText = ({ staticText, texts }) => {
   }, [currentTextIndex]);
 
   return (
-    <div className="flex items-center">
-      <span
+    <div className="flex justify-center items-baseline">
+      <div
         style={{ marginRight: "4px" }}
-        className="text-xl font-semibold pt-3"
+        className="text-sm md:text-xl font-semibold pt-3"
       >
         {staticText}
-      </span>
+      </div>
       <div ref={containerRef}>
         {texts.map((text, index) => (
           <div
@@ -52,7 +52,7 @@ const TypingText = ({ staticText, texts }) => {
               <span
                 key={charIndex}
                 style={{ marginRight: char === " " ? "2px" : "0" }}
-                className="text-5xl font-extrabold"
+                className="text-xl md:text-5xl font-extrabold"
               >
                 {char}
               </span>

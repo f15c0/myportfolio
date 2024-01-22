@@ -3,9 +3,8 @@ import Pic from "../assets/me/p5.jpg";
 
 const About = () => {
   return (
-    <div className="flex justify-center">
-      {/* <h3 className="title text-emerald-800">About Me</h3> */}
-      <div className="flex justify-center items-center space-x-10">
+    <div className="grid grid-cols-1 md:grid-cols-2 justify-center items-center gap-6 md:gap-0">
+      <div className="flex justify-center">
         <Avatar
           src={Pic}
           alt="no image here"
@@ -20,11 +19,12 @@ const About = () => {
             },
           }}
         />
-
-        <p className="ml-10 w-1/2 ">
-          I am an adaptable Software Engineer / Blockchain Developer with over
-        </p>
       </div>
+
+      <p className="text-center md:text-left">
+        I am an adaptable Software Engineer / Blockchain Developer with over
+        {/* ... */}
+      </p>
     </div>
   );
 };
