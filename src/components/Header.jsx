@@ -142,7 +142,7 @@ export function HeaderMiddle() {
         </Group>
         <div className="">
           <h2 className="cursor-pointer hover:text-gray-400">
-            Dennis <span className="font-bold">Fisco</span>
+            <span className="font-bold">Fisco</span>
           </h2>
         </div>
         <Group spacing={0} className={classes.social} position="right" noWrap>
