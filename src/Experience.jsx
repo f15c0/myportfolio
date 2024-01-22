@@ -9,13 +9,13 @@ const Experience = () => {
 
   const getCardClasses = (card) => {
     const baseClasses =
-      "w-72 md:w-96 bg-white p-4 md:p-6 shadow-lg transition duration-300 cursor-pointer";
+      "w-72 md:w-96 bg-white p-4 md:p-6 shadow-lg transition duration-300 cursor-pointer ";
     const tiltClasses =
       card === "work"
-        ? "transform -rotate-6 hover:rotate-0"
+        ? "transform -rotate-6 hover:rotate-0 "
         : "transform rotate-6 hover:rotate-0 ";
     const activeClasses =
-      " ring-offset-2 scale-105 shadow-md shadow-emerald-200";
+      " ring-offset-2 scale-105 shadow-md shadow-emerald-200 rounded-3xl";
     return `${baseClasses} ${tiltClasses} ${
       openCard === card ? activeClasses : ""
     }`;
@@ -45,7 +45,7 @@ const Experience = () => {
         Work, Internship & Volunteership
       </p>
 
-      <div className="flex flex-wrap justify-center gap-16 py-10 mt-10 md:space-x-28">
+      <div className="flex flex-wrap justify-center gap-16 py-10 mt-10 md:space-x-28 ">
         <div
           className={getCardClasses("work")}
           onClick={() => setOpenCard("work")}
