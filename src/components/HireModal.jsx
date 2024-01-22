@@ -22,6 +22,7 @@ const HireMe = ({ opened, open, close }) => {
   return (
     <Modal
       opened={opened}
+      size="md"
       withCloseButton={false}
       classNames={{
         header: "shadow-lg bg-gray-100 flex justify-center items-center ",

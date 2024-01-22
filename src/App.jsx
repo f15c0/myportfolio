@@ -3,6 +3,7 @@ import { MantineProvider, Text } from "@mantine/core";
 import { HeaderMiddle } from "./components/Header";
 import Jumbo from "./components/Jumbo";
 import ParticlesBg from "./components/ParticlesBg";
+import Experience from "./Experience";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
       {/* <ParticlesBg /> */}
       <HeaderMiddle />
       <Jumbo />
+      <Experience />
     </MantineProvider>
   );
 }

@@ -13,6 +13,7 @@ import TypingText from "./TypingText";
 import { useDisclosure } from "@mantine/hooks";
 import HireMe from "./HireModal";
 import CV from "../assets/Dennis_Agbokpe_CV.pdf";
+import About from "./About";
 
 const Jumbo = () => {
   ///Texts
@@ -65,6 +66,9 @@ const Jumbo = () => {
             </div>
           </div>
           {/* Something here */}
+        </div>
+        <div className=" flex items-center justify-center">
+          <About />
         </div>
         <div className="py-3  space-x-10 flex items-center justify-center">
           <a href={linkedIn} target="_blank" rel="noopener noreferrer">

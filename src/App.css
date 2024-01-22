@@ -5,3 +5,8 @@
   margin: 0px;
   font-family: 'Source Sans Pro', sans-serif;
 }
+
+.title{
+  padding: 10px;
+  text-align: center;
+}
