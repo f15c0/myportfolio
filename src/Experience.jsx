@@ -15,7 +15,7 @@ const Experience = () => {
         ? "transform -rotate-6 hover:rotate-0 "
         : "transform rotate-6 hover:rotate-0 ";
     const activeClasses =
-      " ring-offset-2 scale-105 shadow-md shadow-emerald-200 rounded-3xl";
+      " ring-offset-2 scale-105 shadow-md shadow-emerald-200 rounded-3xl text-emerald-600";
     return `${baseClasses} ${tiltClasses} ${
       openCard === card ? activeClasses : ""
     }`;
