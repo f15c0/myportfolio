@@ -13,7 +13,7 @@ const Experience = () => {
     const tiltClasses =
       card === "work"
         ? "transform -rotate-6 hover:rotate-0"
-        : "transform rotate-12 hover:rotate-0";
+        : "transform rotate-6 hover:rotate-0 ";
     const activeClasses =
       " ring-offset-2 scale-105 shadow-md shadow-emerald-200";
     return `${baseClasses} ${tiltClasses} ${
@@ -45,7 +45,7 @@ const Experience = () => {
         Work, Internship & Volunteership
       </p>
 
-      <div className="flex flex-wrap justify-center gap-10 py-10 mt-10 space-x-28">
+      <div className="flex flex-wrap justify-center gap-16 py-10 mt-10 md:space-x-28">
         <div
           className={getCardClasses("work")}
           onClick={() => setOpenCard("work")}

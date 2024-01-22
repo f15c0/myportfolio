@@ -70,7 +70,7 @@ const Jumbo = () => {
         <div className=" flex items-center justify-center">
           <About />
         </div>
-        <div className="py-3  space-x-10 flex items-center justify-center">
+        <div className="py-3 whitespace-nowrap px-12 md:space-x-10 flex items-center justify-center">
           <a href={linkedIn} target="_blank" rel="noopener noreferrer">
             <Button
               variant="default"
