@@ -21,15 +21,8 @@ const About = () => {
           }}
         />
 
-        <p className="ml-10 w-1/2 text-justify">
+        <p className="ml-10 w-1/2 ">
           I am an adaptable Software Engineer / Blockchain Developer with over
-          five (5) years of experience, skilled in delivering high-quality
-          software solutions while navigating complex technical challenges. With
-          a strong proficiency in multiple programming languages and frameworks,
-          database management, hardware maintenance, networking configuration,
-          and security management, with strong problem-solving and communication
-          skills, I collaborate effectively with stakeholders to deliver
-          innovative and efficient solutions.
         </p>
       </div>
     </div>
