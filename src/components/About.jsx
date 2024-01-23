@@ -32,20 +32,20 @@ const About = () => {
       label: "MySQL",
     },
     {
-      icon: "https://img.icons8.com/fluency/96/mysql-logo.png",
-      label: "MySQL",
+      icon: "https://img.icons8.com/color/48/git.png",
+      label: "Git",
     },
     {
-      icon: "https://img.icons8.com/fluency/96/mysql-logo.png",
-      label: "MySQL",
+      icon: "https://img.icons8.com/color/48/react-native.png",
+      label: "React Native",
     },
     {
-      icon: "https://img.icons8.com/fluency/96/mysql-logo.png",
-      label: "MySQL",
+      icon: "https://img.icons8.com/color-glass/48/bootstrap.png",
+      label: "Bootstrap",
     },
     {
-      icon: "https://img.icons8.com/fluency/96/mysql-logo.png",
-      label: "MySQL",
+      icon: "https://img.icons8.com/color/48/tailwindcss.png",
+      label: "TailwindCSS",
     },
     // Add more tech stack items here20C997
   ];
@@ -57,7 +57,7 @@ const About = () => {
   const offsetY = 150; // Vertical offset from the center
 
   return (
-    <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+    <div className="flex flex-col md:flex-row justify-between items-center gap-10 md:space-x-10">
       <div>
         <Avatar
           src={Pic}
@@ -96,26 +96,14 @@ const About = () => {
       </div>
 
       {/* Regular layout for medium and larger screens */}
-      <div className="hidden absolute md:relative inset-0 md:flex justify-center items-center  w-[300px] h-[300px]">
-        {techStack.map((tech, index, array) => {
-          const angle = (index / array.length) * 2 * Math.PI;
-          const x = orbitSizeLg * Math.cos(angle) + offsetX; // X position for orbit
-          const y = orbitSizeLg * Math.sin(angle) + offsetY; // Y position for orbit
-          return (
-            <motion.div
-              key={tech.label}
-              className="absolute"
-              style={{ left: `${x}px`, top: `${y}px` }}
-              animate={{ rotate: 360 }}
-              transition={{ repeat: Infinity, duration: 10, ease: "linear" }}
-            >
-              <StackIcon icon={tech.icon} label={tech.label} />
-            </motion.div>
-          );
-        })}
-        <div className="flex justify-center items-center pl-10 font-bold overline text-emerald-800">
-          My Tech Stacks
-        </div>
+
+      <div className="hidden md:flex flex-wrap justify-evenly items-center gap-4 w-96">
+        {techStack.map((tech) => (
+          <StackIcon key={tech.label} icon={tech.icon} label={tech.label} />
+        ))}
+        <p className="font-bold text-emerald-700  overline pt-2 ">
+          My Tech Stack
+        </p>
       </div>
     </div>
   );
