@@ -10,3 +10,38 @@
   padding: 10px;
   text-align: center;
 }
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.rotating {
+  animation: rotate 20s linear infinite;
+}
+
+@keyframes orbit {
+  0% {
+    transform: rotate(0deg) translateX(100px);
+  }
+
+  100% {
+    transform: rotate(360deg) translateX(100px);
+  }
+}
+
+.orbit {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  animation: orbit 20s linear infinite;
+}

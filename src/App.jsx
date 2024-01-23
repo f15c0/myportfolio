@@ -28,7 +28,7 @@ function App() {
       withGlobalStyles
       withNormalizeCSS
     >
-      <ParticlesBg />
+      {/* <ParticlesBg /> */}
       <HeaderMiddle />
       <Jumbo />
       <Experience />
