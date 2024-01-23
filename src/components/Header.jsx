@@ -7,6 +7,7 @@ import {
   Container,
   Burger,
   rem,
+  Avatar,
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import {
@@ -14,6 +15,7 @@ import {
   IconBrandYoutube,
   IconBrandInstagram,
 } from "@tabler/icons-react";
+import Pic from "../assets/me/p5.jpg";
 
 const useStyles = createStyles((theme) => ({
   inner: {
@@ -140,10 +142,24 @@ export function HeaderMiddle() {
         <Group className={classes.links} spacing={10}>
           {items}
         </Group>
-        <div className="">
-          <h2 className="cursor-pointer hover:text-gray-400">
+        <div className="flex justify-center items-center md:gap-3 gap-2">
+          <Avatar
+            src={Pic}
+            alt="no image here"
+            color="indigo"
+            size={24}
+            radius={32}
+            className="transition duration-300 ease-in-out hover:scale-105 hover:grayscale"
+            imageProps={{
+              style: {
+                objectFit: "cover",
+                objectPosition: "top",
+              },
+            }}
+          />
+          <p className="cursor-pointer hover:text-gray-400">
             <span className="font-bold">Fisco</span>
-          </h2>
+          </p>
         </div>
         <Group spacing={0} className={classes.social} position="right" noWrap>
           <ActionIcon size="lg">

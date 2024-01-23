@@ -35,8 +35,10 @@ const Jumbo = () => {
     <section>
       <Container
         size="lg"
-        className="bg-gray-100 flex flex-col justify-between"
-        style={{ minHeight: "60vh" }}
+        className="bg-gradient-to-r from-white to-gray-50  flex flex-col justify-between"
+        style={{
+          minHeight: "60vh",
+        }}
       >
         <div className="grid grid-cols-2">
           <div className="text-center col-span-2 justify-center items-center">
@@ -44,7 +46,7 @@ const Jumbo = () => {
               className="md:text-xl font-light pt-3"
               color={theme.primaryColor}
             >
-              Hello there, I'm Dennis K.
+              Hello there👋🏽, I'm Dennis K.
             </Text>
             <div>
               <Text

@@ -1,5 +1,5 @@
 import { Avatar } from "@mantine/core";
-import Pic from "../assets/me/p5.jpg";
+import Pic from "../assets/coder.png";
 import StackIcon from "./StackIcons";
 import React from "../assets/icons/react.svg";
 import { motion } from "framer-motion";
@@ -59,7 +59,12 @@ const About = () => {
   return (
     <div className="flex flex-col md:flex-row justify-between items-center gap-10 md:space-x-10">
       <div>
-        <Avatar
+        <img
+          src={Pic}
+          alt="Coder"
+          className="h-36 md:h-72 transition duration-300 ease-in-out hover:scale-105 hover:grayscale"
+        />
+        {/* <Avatar
           src={Pic}
           alt="no image here"
           color="indigo"
@@ -72,7 +77,7 @@ const About = () => {
               objectPosition: "top",
             },
           }}
-        />
+        /> */}
       </div>
       <div className="md:hidden absolute md:relative inset-0 justify-center items-center  w-[300px] h-[300px]">
         {/* Adjust the size as needed */}
