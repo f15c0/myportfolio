@@ -47,6 +47,18 @@ const About = () => {
       icon: "https://img.icons8.com/color/48/tailwindcss.png",
       label: "TailwindCSS",
     },
+    // {
+    //   icon: "https://img.icons8.com/color/48/tailwindcss.png",
+    //   label: "TailwindCSS",
+    // },
+    // {
+    //   icon: "https://img.icons8.com/color/48/tailwindcss.png",
+    //   label: "TailwindCSS",
+    // },
+    // {
+    //   icon: "https://img.icons8.com/color/48/tailwindcss.png",
+    //   label: "TailwindCSS",
+    // },
     // Add more tech stack items here20C997
   ];
 
