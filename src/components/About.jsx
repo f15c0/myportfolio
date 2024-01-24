@@ -1,4 +1,4 @@
-import { Avatar } from "@mantine/core";
+import { Tooltip } from "@mantine/core";
 import Pic from "../assets/coder.png";
 import StackIcon from "./StackIcons";
 import React from "../assets/icons/react.svg";
@@ -59,11 +59,20 @@ const About = () => {
   return (
     <div className="flex flex-col md:flex-row justify-between items-center gap-10 md:space-x-10">
       <div>
-        <img
-          src={Pic}
-          alt="Coder"
-          className="h-36 md:h-72 transition duration-300 ease-in-out hover:scale-105 hover:grayscale"
-        />
+        <Tooltip
+          label="hey, there!"
+          color="teal"
+          position="top-end"
+          offset={{ mainAxis: -10, crossAxis: 0 }}
+          transitionProps={{ transition: "pop-top-left", duration: 300 }}
+          openDelay={200}
+        >
+          <img
+            src={Pic}
+            alt="Coder"
+            className="h-36 md:h-72 transition duration-300 ease-in-out hover:scale-105 hover:grayscale"
+          />
+        </Tooltip>
       </div>
       <div className="md:hidden absolute   justify-center items-center  w-[300px] h-[300px]">
         {techStack.map((tech, index, array) => {
@@ -91,8 +100,8 @@ const About = () => {
         {techStack.map((tech) => (
           <StackIcon key={tech.label} icon={tech.icon} label={tech.label} />
         ))}
-        <p className="font-bold text-emerald-700  overline pt-2 ">
-          My Tech Stack
+        <p className="font-normal text-gray-600  overline pt-2 ">
+          My Tech Stacks
         </p>
       </div>
     </div>
