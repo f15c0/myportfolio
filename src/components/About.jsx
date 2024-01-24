@@ -53,8 +53,8 @@ const About = () => {
   const orbitSizeLg = 130; // Orbit size around the avatar
   const orbitSizeSm = 103;
 
-  const offsetX = 150; // Horizontal offset from the center
-  const offsetY = 150; // Vertical offset from the center
+  const offsetX = 130; // Horizontal offset from the center
+  const offsetY = 60; // Vertical offset from the center
 
   return (
     <div className="flex flex-col md:flex-row justify-between items-center gap-10 md:space-x-10">
@@ -64,27 +64,12 @@ const About = () => {
           alt="Coder"
           className="h-36 md:h-72 transition duration-300 ease-in-out hover:scale-105 hover:grayscale"
         />
-        {/* <Avatar
-          src={Pic}
-          alt="no image here"
-          color="indigo"
-          size={148}
-          radius={148}
-          className="shadow-gray-500 shadow-md transition duration-300 ease-in-out hover:scale-105 hover:grayscale"
-          imageProps={{
-            style: {
-              objectFit: "cover",
-              objectPosition: "top",
-            },
-          }}
-        /> */}
       </div>
-      <div className="md:hidden absolute md:relative inset-0 justify-center items-center  w-[300px] h-[300px]">
-        {/* Adjust the size as needed */}
+      <div className="md:hidden absolute   justify-center items-center  w-[300px] h-[300px]">
         {techStack.map((tech, index, array) => {
           const angle = (index / array.length) * 2 * Math.PI;
-          const x = orbitSizeSm * Math.cos(angle) + 206; // X position for orbit
-          const y = orbitSizeSm * Math.sin(angle) + 315; // Y position for orbit
+          const x = orbitSizeSm * Math.cos(angle) + offsetX; // X position for orbit
+          const y = orbitSizeSm * Math.sin(angle) + offsetY; // Y position for orbit
 
           return (
             <motion.div

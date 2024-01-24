@@ -85,10 +85,6 @@ const useStyles = createStyles((theme) => ({
   },
 }));
 
-//
-//   links:[];
-//
-
 const links = [
   {
     link: "/about",
@@ -137,7 +133,7 @@ export function HeaderMiddle() {
           onClick={toggle}
           size="sm"
           className={classes.burger}
-        ></Burger>
+        />
 
         <Group className={classes.links} spacing={10}>
           {items}
