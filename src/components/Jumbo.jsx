@@ -6,12 +6,13 @@ import {
   useMantineTheme,
 } from "@mantine/core";
 
-import Linkedin from "../assets/linkedin.svg";
+import Coffee from "../assets/coffee.svg";
 import { BsLinkedin, BsCloudDownload } from "react-icons/bs";
-import { useLayoutEffect, useRef } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
 import TypingText from "./TypingText";
 import { useDisclosure } from "@mantine/hooks";
 import HireMe from "./HireModal";
+import BuyMeCoffee from "./BuymeCoffee";
 import CV from "../assets/Dennis_Agbokpe_CV.pdf";
 import About from "./About";
 
@@ -30,6 +31,7 @@ const Jumbo = () => {
 
   ///Effects & Hooks
   const [opened, { open, close }] = useDisclosure(false);
+  const [coffeeModalOpened, setCoffeeModalOpened] = useState(false);
 
   return (
     <section>
@@ -67,7 +69,15 @@ const Jumbo = () => {
         <div className=" flex items-center justify-center">
           <About />
         </div>
-        <div className="py-3 whitespace-nowrap px-12 md:space-x-10 flex items-center justify-center">
+        <div className="flex justify-end items-center mt-4">
+          <img
+            src={Coffee}
+            alt="By me a coffee"
+            onClick={() => setCoffeeModalOpened(true)}
+            className="h-8 md:h-10 hover:scale-105 duration-150 ease-in-out transform shadow-sm  cursor-pointer"
+          />
+        </div>
+        <div className="py-3 whitespace-nowrap px-12 md:space-x-10 flex items-center justify-center ">
           <a href={linkedIn} target="_blank" rel="noopener noreferrer">
             <Button
               variant="default"
@@ -97,6 +107,10 @@ const Jumbo = () => {
       </Container>
       {/* <Divider label="About Me" /> */}
       <HireMe opened={opened} close={close} open={open} />
+      <BuyMeCoffee
+        opened={coffeeModalOpened}
+        close={() => setCoffeeModalOpened(false)} //close
+      />
     </section>
   );
 };
