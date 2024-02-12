@@ -21,6 +21,7 @@
     "@mantine/prism": "^6.0.1",
     "@mantine/spotlight": "^6.0.1",
     "@tabler/icons-react": "^2.10.0",
+    "axios": "^1.6.7",
     "dayjs": "^1.11.7",
     "embla-carousel-react": "^7.1.0",
     "framer-motion": "^11.0.1",

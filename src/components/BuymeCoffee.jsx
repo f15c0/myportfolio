@@ -1,14 +1,18 @@
 import { Modal, Group, Button, Textarea, Text } from "@mantine/core";
-import { useMantineTheme, TextInput, MultiSelect } from "@mantine/core";
+import { useMantineTheme, TextInput, Loader } from "@mantine/core";
+import axios from "axios";
+import { useState } from "react";
 import { SiBuymeacoffee } from "react-icons/si";
 
 const BuyMeCoffee = ({ opened, open, close }) => {
   const theme = useMantineTheme();
+  const [loading, setLoading] = useState(false); //Loading state
 
   //Form Submission
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Example of how you might collect form data
+    setLoading(true);
+
     const form = e.currentTarget;
     const formData = new FormData(form);
     const paymentDetails = {
@@ -16,6 +20,7 @@ const BuyMeCoffee = ({ opened, open, close }) => {
       email: formData.get("email"),
       amount: formData.get("amount"),
       message: formData.get("message"),
+
       // Hardcoded values
       state: "starter",
       accountnumber: "341220512110",
@@ -26,9 +31,27 @@ const BuyMeCoffee = ({ opened, open, close }) => {
     };
 
     console.log(paymentDetails);
-    // Here you would typically send `paymentDetails` to your server for processing
+    try {
+      const response = await axios.post(
+        "http://localhost/pokemon/processPayment.php",
+        paymentDetails
+      );
+      const { data } = response;
 
-    form.reset();
+      if (data.status == true) {
+        // Redirect user to authorization URL
+        window.location.href = data.data.authorization_url;
+        console.log(data);
+        form.reset();
+        close();
+      } else {
+        // Handle error
+        console.error("Payment initiation Failed:", data.message);
+      }
+    } catch (error) {
+      console.error("Failed:", error);
+    }
+    setLoading(false);
   };
 
   return (
@@ -102,6 +125,8 @@ const BuyMeCoffee = ({ opened, open, close }) => {
             // variant="outline"
             type="submit"
             radius="lg"
+            loading={loading}
+            loaderProps={{ type: "Dots" }}
           >
             Buy!
           </Button>
